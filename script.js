@@ -1,5 +1,5 @@
-let computerHand = "Error";
-let selected = false;
+let computerHand = 0;
+let finished = false;
 let playerCount = 0;
 let computerCount = 0;
 const rock = document.querySelector(".rock");
@@ -24,14 +24,14 @@ function computerPlay (){
   
 }
 
-//function to calculate game result//
+//function to calculate game result of a round and keep track of match score, a = player hand, b = computer hand, c = number of rounds to play//
 
 function game(a,b,c) {
     console.log(a);
     console.log(b);
     console.log(c);
     
-    if (selected == true) {
+    if (finished == true) {
         alert("Game Finished, Please Reset!");
     }
 
@@ -49,12 +49,12 @@ function game(a,b,c) {
         playerCount++;
         if (computerCount == c){
             gameState.textContent = "YOU LOOSE!";
-            selected = true;
+            finished = true;
             return;
         }
         if (playerCount == c){
             gameState.textContent = "YOU WIN!";
-            selected = true;
+            finished = true;
             return;
         }
         return;
@@ -65,12 +65,12 @@ function game(a,b,c) {
         computerCount++;
         if (computerCount == c){
             gameState.textContent = "YOU LOOSE!";
-            selected = true;
+            finished = true;
             return;
         }
         if (playerCount == c){
             gameState.textContent = "YOU WIN!";
-            selected = true;
+            finished = true;
             return;
         }
         return;
@@ -80,12 +80,12 @@ function game(a,b,c) {
         playerCount++;
         if (computerCount == c){
             gameState.textContent = "YOU LOOSE!";
-            selected = true;
+            finished = true;
             return;
         }
         if (playerCount == c){
             gameState.textContent = "YOU WIN!";
-            selected = true;
+            finished = true;
             return;
         }
         return;
@@ -95,12 +95,12 @@ function game(a,b,c) {
         computerCount++;
         if (computerCount == c){
             gameState.textContent = "YOU LOOSE!";
-            selected = true;
+            finished = true;
             return;
         }
         if (playerCount == c){
             gameState.textContent = "YOU WIN!";
-            selected = true;
+            finished = true;
             return;
         }
         return;
@@ -110,12 +110,12 @@ function game(a,b,c) {
         playerCount++;
         if (computerCount == c){
             gameState.textContent = "YOU LOOSE!";
-            selected = true;
+            finished = true;
             return;
         }
         if (playerCount == c){
             gameState.textContent = "YOU WIN!";
-            selected = true;
+            finished = true;
             return;
         }
         return;
@@ -137,12 +137,12 @@ function updateScore  (){
 // Reset Game function //
 
 function resetGame () {
-    selected = false;
+    finished = false;
     gameState.textContent = "Make a Choice"
     playerCount = 0;
     computerCount = 0;
     updateScore();
-    console.log(selected)
+    console.log(finished)
     computerPlay();
 }
 
