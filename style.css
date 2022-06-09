@@ -1,2 +1,106 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    min-height: 100%;
+    flex: 1 1 auto;
+    
+}
 
+.start {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.start {
+    clip-path: polygon(0% 100%, 50% 100%, 100% 0%, 0% 0%);
+}
+
+.spock {
+    clip-path: polygon(50% 100%, 100% 100%, 100% 0%, 0%  0%);
+}
+
+.wrap-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex: 1 1 auto;
+}
+
+.container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 1;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 50vh;
+    flex: 1 1 1;
+    
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 auto;
+}
+
+.restart {
+    display: flex;
+    flex: 1 1 1;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100vw;
+    margin-top: auto;
+    flex: 0 1 auto;
+    
+}
+
+.pick {
+    display: flex;
+    min-width: 300px;
+    min-height: 300px;
+    flex: 0 0 auto;
+    border: 5px solid;
+    border-color: black;
+    border-radius: 10px;
+
+}
