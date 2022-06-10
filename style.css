@@ -31,6 +31,7 @@ body {
     display: flex;
     width: 60vw;
     height: 90vh;
+    flex-direction: column;
     background-color: aqua;
     background-size: cover;
     margin-right: -10vw;
@@ -52,6 +53,7 @@ body {
     display: flex;
     width: 60vw;
     height: 90vh;
+    flex-direction: column;
     background-color: red;
     background-size: cover;
     margin-left: -10vw;
@@ -78,11 +80,11 @@ body {
     flex: 1;
 }
 
-.one {
+.left {
     filter: drop-shadow( 10px 0px 5px rgba(0, 0, 0, 0.5));
 
 }
-.two {
+.right {
     filter: drop-shadow( -10px 0px 5px rgba(0, 0, 0, 0.5));
 
 }
@@ -125,6 +127,19 @@ body {
     
 }
 
+.optionComputer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1 1 1;
+  
+}
+
+
+
 .counter {
     display: flex;
     flex-direction: row;
@@ -155,8 +170,8 @@ body {
 
 .pick {
     display: flex;
-    min-width: 300px;
-    min-height: 300px;
+    min-width: 150px;
+    min-height: 150px;
     flex: 0 0 auto;
     border: 5px solid;
     border-color: black;
@@ -167,6 +182,10 @@ body {
     transform: scale(1.1);
 }
 
+.optionComputer .pick:hover{
+    transform: scale(1);
+}
+
 .lizard  {
     display: none;
 }
@@ -175,3 +194,14 @@ body {
     display: none;
 }
 
+.restart {
+    display: none;
+    flex-direction: column;
+    min-width: 100vw;
+    max-height: 90vh;
+    margin: 0px;
+    
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+}
