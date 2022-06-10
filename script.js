@@ -404,6 +404,16 @@ function showFinish () {
     five.style.display="none";
     start.style.display = "none";
     finish.style.display="flex"
+    one.style.backgroundColor = "";
+    two.style.backgroundColor = "";
+    three.style.backgroundColor = "";
+    four.style.backgroundColor = "";
+    five.style.backgroundColor = "";
+    rock.style.backgroundColor = "";
+    paper.style.backgroundColor = "";
+    scissors.style.backgroundColor = "";
+    lizard.style.backgroundColor = "";
+    spock.style.backgroundColor = "";
     gameType = "";
 
 }
