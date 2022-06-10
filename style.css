@@ -1,5 +1,9 @@
+
+
 * {
     box-sizing: border-box;
+    font-family: 'Alfa Slab One', cursive;
+    
 }
 
 body {
@@ -36,19 +40,20 @@ body {
     background-size: cover;
     margin-right: -10vw;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     clip-path: polygon(0% 100%, 100% 100%, 50% 0%, 0% 0%);
     background-image: url(./img/standarBanner.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: 75vh 100vh;
+    padding: 80px;
+    background-size: 120vh 90vh;
     flex: 1;
 }
 .standar:hover {
     transform: scale(1.1, 1);
     clip-path: polygon(0% 100%, 100% 100%, 55% 0%, 0% 0%);
-    background-size: 75vh 110vh;
+    background-size: 120vh 99vh;
     
     
 }
@@ -62,12 +67,13 @@ body {
     background-size: cover;
     margin-left: -10vw;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     clip-path: polygon(50% 100%, 100% 100%, 100% 0%, 0%  0%);
     background-image: url(./img/spockBanner.png);
     background-position: center;
     background-size: 45vh 90vh;
     background-repeat: no-repeat;
+    padding: 80px;
     flex: 1;
 }
 
@@ -87,6 +93,14 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1;
+}
+
+.choice-wrap p {
+    font-size: 30px;
+}
+
+.choice-wrap h3 {
+    font-size: 50px;
 }
 
 .choice-wrap.left {
