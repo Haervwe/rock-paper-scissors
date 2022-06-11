@@ -21,6 +21,8 @@ const two = document.querySelector(".two");
 const three = document.querySelector(".three");
 const four = document.querySelector(".four");
 const five = document.querySelector(".five");
+const bkgLeft = document.querySelector(".counterLeft");
+
 
 //game variables//
 let computerHand = 0;
@@ -53,7 +55,7 @@ function computerPlayStandar (){
     computerHand = randomNum(3);
     switch (computerHand){
         case 1:
-            one.style.backgroundColor = "red";
+            one.style.backgroundColor = "#5C00E0";
             two.style.backgroundColor = "";
             three.style.backgroundColor = "";
             four.style.backgroundColor = "";
@@ -61,7 +63,7 @@ function computerPlayStandar (){
             break;
         case 2:
             one.style.backgroundColor = "";
-            two.style.backgroundColor = "red";
+            two.style.backgroundColor = "#5C00E0";
             three.style.backgroundColor = "";
             four.style.backgroundColor = "";
             five.style.backgroundColor = "";
@@ -69,7 +71,7 @@ function computerPlayStandar (){
         case 3:
             one.style.backgroundColor = "";
             two.style.backgroundColor = "";
-            three.style.backgroundColor = "red";
+            three.style.backgroundColor = "#5C00E0";
             four.style.backgroundColor = "";
             five.style.backgroundColor = "";
             break;
@@ -84,7 +86,7 @@ function computerPlayStandar (){
 function playerHand (n){
     switch (n){
         case 1:
-            rock.style.backgroundColor = "red";
+            rock.style.backgroundColor = "#5C00E0";
             paper.style.backgroundColor = "";
             scissors.style.backgroundColor = "";
             lizard.style.backgroundColor = "";
@@ -92,7 +94,7 @@ function playerHand (n){
             break;
         case 2:
             rock.style.backgroundColor = "";
-            paper.style.backgroundColor = "red";
+            paper.style.backgroundColor = "#5C00E0";
             scissors.style.backgroundColor = "";
             lizard.style.backgroundColor = "";
             spock.style.backgroundColor = "";
@@ -100,7 +102,7 @@ function playerHand (n){
         case 3:
             rock.style.backgroundColor = "";
             paper.style.backgroundColor = "";
-            scissors.style.backgroundColor = "red";
+            scissors.style.backgroundColor = "#5C00E0";
             lizard.style.backgroundColor = "";
             spock.style.backgroundColor = "";
             break;
@@ -108,7 +110,7 @@ function playerHand (n){
             rock.style.backgroundColor = "";
             paper.style.backgroundColor = "";
             scissors.style.backgroundColor = "";
-            lizard.style.backgroundColor = "red";
+            lizard.style.backgroundColor = "#5C00E0";
             spock.style.backgroundColor = "";
             break;
         case 5:
@@ -116,7 +118,7 @@ function playerHand (n){
             paper.style.backgroundColor = "";
             scissors.style.backgroundColor = "";
             lizard.style.backgroundColor = "";
-            spock.style.backgroundColor = "red";
+            spock.style.backgroundColor = "#5C00E0";
             break;
         
     }
@@ -127,7 +129,7 @@ function computerPlaySpock (){
     computerHand = randomNum(5);
     switch (computerHand){
         case 1:
-            one.style.backgroundColor = "red";
+            one.style.backgroundColor = "#5C00E0";
             two.style.backgroundColor = "";
             three.style.backgroundColor = "";
             four.style.backgroundColor = "";
@@ -135,7 +137,7 @@ function computerPlaySpock (){
             break;
         case 2:
             one.style.backgroundColor = "";
-            two.style.backgroundColor = "red";
+            two.style.backgroundColor = "#5C00E0";
             three.style.backgroundColor = "";
             four.style.backgroundColor = "";
             five.style.backgroundColor = "";
@@ -143,7 +145,7 @@ function computerPlaySpock (){
         case 3:
             one.style.backgroundColor = "";
             two.style.backgroundColor = "";
-            three.style.backgroundColor = "red";
+            three.style.backgroundColor = "#5C00E0";
             four.style.backgroundColor = "";
             five.style.backgroundColor = "";
             break;
@@ -151,7 +153,7 @@ function computerPlaySpock (){
             one.style.backgroundColor = "";
             two.style.backgroundColor = "";
             three.style.backgroundColor = "";
-            four.style.backgroundColor = "red";
+            four.style.backgroundColor = "#5C00E0";
             five.style.backgroundColor = "";
             break;
         case 5:
@@ -159,7 +161,7 @@ function computerPlaySpock (){
             two.style.backgroundColor = "";
             three.style.backgroundColor = "";
             four.style.backgroundColor = "";
-            five.style.backgroundColor = "red";
+            five.style.backgroundColor = "#5C00E0";
             break;
         
     }
@@ -375,6 +377,7 @@ function resetGame () {
 
 
 function showStandar () {
+    
     container.style.display="flex";
     start.style.display = "none"; 
     lizard.style.display="none";
@@ -383,9 +386,11 @@ function showStandar () {
     spock.style.display="none";
     finish.style.display="none"
     gameType = "standar";
+    
 }
 
 function showSpock () {
+    
     container.style.display="flex";
     lizard.style.display="flex";
     spock.style.display="flex";
@@ -394,6 +399,17 @@ function showSpock () {
     start.style.display = "none"; 
     finish.style.display="none"
     gameType = "spock";
+    
+}
+
+function bkgSpock () {
+    bkgLeft.setAttribute("style", "background-image: url(./img/spockBanner.png)");
+    document.querySelector("body").style.backgroundColor= "#ff0000";
+}   
+
+function bkgStandar () {
+    bkgLeft.setAttribute("style", "background-image: url(./img/fry.png)");
+    document.querySelector("body").style.backgroundColor= "#00ffff";
 }
 
 function showFinish () {
@@ -414,6 +430,7 @@ function showFinish () {
     scissors.style.backgroundColor = "";
     lizard.style.backgroundColor = "";
     spock.style.backgroundColor = "";
+    document.querySelector("body").style.backgroundColor= "#ffffff";
     gameType = "";
 
 }
@@ -453,6 +470,6 @@ scissors.addEventListener("click",function () { computerPlay(); playerHand(3); g
 lizard.addEventListener("click",function () { computerPlay(); playerHand(4); game(4, computerHand);updateScore(5);});
 spock.addEventListener("click",function () { computerPlay(); playerHand(5); game(5, computerHand);updateScore(5);});
 reset.addEventListener("click", resetGame);
-standar.addEventListener("click", showStandar);
-special.addEventListener("click", showSpock);
+standar.addEventListener("click", function () {showStandar(); bkgStandar();});
+special.addEventListener("click",function(){ showSpock(); bkgSpock();});
 
